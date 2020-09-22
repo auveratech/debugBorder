@@ -1,0 +1,99 @@
+.body__landingImage, .body__banner, .body__bannerText, .body__row, .body__rowContainer, .body__rowContainerCard {
+  border: 2px solid red;
+}
+
+.body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.body__landingImage {
+  width: 100%;
+  height: 100%;
+}
+
+.body__landingImage > img {
+  opacity: 0.5;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+  z-index: -100;
+}
+
+.body__banner {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  width: 100%;
+  height: 53%;
+  max-height: 100%;
+  background-color: rgba(0, 0, 0, 0.481);
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.body__bannerText {
+  width: 60%;
+  color: white;
+  font-size: 32px;
+  text-align: center;
+}
+
+.body__row {
+  background-color: black;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 40%;
+  max-height: 100%;
+  top: 100%;
+}
+
+.body__rowContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 20%;
+  max-height: 100%;
+}
+
+.body__rowContainerCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  max-height: 100%;
+  margin: 10px 10px;
+}
+
+.body__rowContainerCard.cardOne > p {
+  color: black;
+}
+
+.body__rowContainerCard.cardOne > img, .body__rowContainerCard.cardTwo > img, .body__rowContainerCard.cardThree > img, .body__rowContainerCard.cardFour > img, .body__rowContainerCard.cardFive > img {
+  cursor: pointer;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+  opacity: 0.5;
+}
+
+.body__rowContainerCard.cardOne > img:hover, .body__rowContainerCard.cardTwo > img:hover, .body__rowContainerCard.cardThree > img:hover, .body__rowContainerCard.cardFour > img:hover, .body__rowContainerCard.cardFive > img:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+  opacity: 1;
+}
+/*# sourceMappingURL=Body.css.map */

@@ -1,0 +1,112 @@
+%debugBorder {
+    border: 2px solid red;
+}
+
+.body {
+    display: flex;
+
+    &__landingImage {
+        @extend %debugBorder;
+        width: 100%;
+        height: 100%;
+
+        & > img {
+            opacity: 0.5;
+            object-fit: cover;
+            max-width: 100%;
+            max-height: 100%;
+            overflow: hidden;
+            z-index: -100;
+
+        }
+    }
+
+    &__banner {
+        @extend %debugBorder;
+        position: absolute;
+        display: flex;
+        top: 0;
+        width: 100%;
+        height: 53%;
+        max-height: 100%;
+        background-color: rgba(0, 0, 0, 0.481);
+        justify-content: space-around;
+        align-items: center;
+
+        &Text {
+            @extend %debugBorder;
+            width: 60%;
+            color: white;
+            font-size: 32px;
+            text-align: center;
+        }
+
+    }
+
+    &__row {
+        @extend %debugBorder;
+        background-color: black;
+        position: absolute;
+        display: flex;
+        width: 100%;
+        height: 40%;
+        max-height: 100%;
+        
+        top: 100%;
+
+        &Container {
+            @extend %debugBorder;
+            display: flex;
+            width: 20%;
+            max-height: 100%;
+
+            &Card {
+                @extend %debugBorder;
+                //border-radius: 20%;
+                display: flex;
+                width: 100%;
+                max-height: 100%;
+                margin: 10px 10px;
+
+                &.cardOne > p {
+                    color: black;
+                }
+
+                %sharedCardTraits {
+
+                    cursor: pointer; 
+                    object-fit: cover;
+                    max-width: 100%;
+                    max-height: 100%;
+                    opacity: 0.5;
+
+                    &:hover {
+                        transition: 0.3s;
+                        transform: scale(1.01);
+                        opacity: 1;
+                    }
+
+                }
+
+                &.cardOne > img {
+                    @extend %sharedCardTraits; 
+                }
+
+                &.cardTwo > img {
+                    @extend %sharedCardTraits;
+                }
+                &.cardThree > img {
+                    @extend %sharedCardTraits;
+                }
+                &.cardFour > img {
+                    @extend %sharedCardTraits;
+                }
+                &.cardFive > img {
+                    @extend %sharedCardTraits;
+                }
+            }
+
+        }
+
+    }
+}
